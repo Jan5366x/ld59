@@ -146,3 +146,5 @@ fabric.properties
 /obj/
 /Library/
 /Build/
+
+/UserSettings/
