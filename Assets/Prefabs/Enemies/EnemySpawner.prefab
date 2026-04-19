@@ -1,0 +1,108 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1695769127678524396
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7126744730727521854}
+  - component: {fileID: 2023657845454382883}
+  m_Layer: 0
+  m_Name: EnemySpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7126744730727521854
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1695769127678524396}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2023657845454382883
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1695769127678524396}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2bfb4e0fb0747e4daaee5b5f69717360, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemySpawner
+  enemyPrefabs:
+  - weight: 1
+    prefabs:
+    - {fileID: 7876252263352022908, guid: e14e1f38f6c734921bacc5c8e1fd3e4d, type: 3}
+    cooldown: 1
+  - weight: 1
+    prefabs:
+    - {fileID: 7876252263352022908, guid: e14e1f38f6c734921bacc5c8e1fd3e4d, type: 3}
+    - {fileID: 7876252263352022908, guid: e14e1f38f6c734921bacc5c8e1fd3e4d, type: 3}
+    - {fileID: 7876252263352022908, guid: e14e1f38f6c734921bacc5c8e1fd3e4d, type: 3}
+    cooldown: 3
+  - weight: 1
+    prefabs:
+    - {fileID: 7876252263352022908, guid: e14e1f38f6c734921bacc5c8e1fd3e4d, type: 3}
+    - {fileID: 7876252263352022908, guid: 13cf14f963c342ad19232d5d7443d06f, type: 3}
+    - {fileID: 7876252263352022908, guid: 13cf14f963c342ad19232d5d7443d06f, type: 3}
+    cooldown: 10
+  - weight: 1
+    prefabs:
+    - {fileID: 7876252263352022908, guid: eb406d708b7f652d0b2642fb03dcfa3a, type: 3}
+    cooldown: 3
+  - weight: 1
+    prefabs:
+    - {fileID: 7876252263352022908, guid: eb406d708b7f652d0b2642fb03dcfa3a, type: 3}
+    - {fileID: 7876252263352022908, guid: 13cf14f963c342ad19232d5d7443d06f, type: 3}
+    - {fileID: 7876252263352022908, guid: e14e1f38f6c734921bacc5c8e1fd3e4d, type: 3}
+    cooldown: 5
+  - weight: 1
+    prefabs:
+    - {fileID: 7876252263352022908, guid: eb406d708b7f652d0b2642fb03dcfa3a, type: 3}
+    - {fileID: 7876252263352022908, guid: eb406d708b7f652d0b2642fb03dcfa3a, type: 3}
+    - {fileID: 7876252263352022908, guid: 13cf14f963c342ad19232d5d7443d06f, type: 3}
+    - {fileID: 7876252263352022908, guid: eb406d708b7f652d0b2642fb03dcfa3a, type: 3}
+    - {fileID: 7876252263352022908, guid: 13cf14f963c342ad19232d5d7443d06f, type: 3}
+    cooldown: 10
+  - weight: 1
+    prefabs:
+    - {fileID: 7876252263352022908, guid: d3adc3b05690a32d98468f3eaebb58c9, type: 3}
+    - {fileID: 7876252263352022908, guid: d3adc3b05690a32d98468f3eaebb58c9, type: 3}
+    - {fileID: 7876252263352022908, guid: d3adc3b05690a32d98468f3eaebb58c9, type: 3}
+    - {fileID: 7876252263352022908, guid: d3adc3b05690a32d98468f3eaebb58c9, type: 3}
+    - {fileID: 7876252263352022908, guid: d3adc3b05690a32d98468f3eaebb58c9, type: 3}
+    - {fileID: 7876252263352022908, guid: d3adc3b05690a32d98468f3eaebb58c9, type: 3}
+    - {fileID: 7876252263352022908, guid: d3adc3b05690a32d98468f3eaebb58c9, type: 3}
+    - {fileID: 7876252263352022908, guid: d3adc3b05690a32d98468f3eaebb58c9, type: 3}
+    - {fileID: 7876252263352022908, guid: d3adc3b05690a32d98468f3eaebb58c9, type: 3}
+    - {fileID: 7876252263352022908, guid: d3adc3b05690a32d98468f3eaebb58c9, type: 3}
+    - {fileID: 7876252263352022908, guid: d3adc3b05690a32d98468f3eaebb58c9, type: 3}
+    - {fileID: 7876252263352022908, guid: d3adc3b05690a32d98468f3eaebb58c9, type: 3}
+    - {fileID: 7876252263352022908, guid: d3adc3b05690a32d98468f3eaebb58c9, type: 3}
+    - {fileID: 7876252263352022908, guid: d3adc3b05690a32d98468f3eaebb58c9, type: 3}
+    - {fileID: 7876252263352022908, guid: d3adc3b05690a32d98468f3eaebb58c9, type: 3}
+    - {fileID: 7876252263352022908, guid: d3adc3b05690a32d98468f3eaebb58c9, type: 3}
+    - {fileID: 7876252263352022908, guid: d3adc3b05690a32d98468f3eaebb58c9, type: 3}
+    - {fileID: 7876252263352022908, guid: d3adc3b05690a32d98468f3eaebb58c9, type: 3}
+    - {fileID: 7876252263352022908, guid: d3adc3b05690a32d98468f3eaebb58c9, type: 3}
+    - {fileID: 7876252263352022908, guid: d3adc3b05690a32d98468f3eaebb58c9, type: 3}
+    - {fileID: 7876252263352022908, guid: d3adc3b05690a32d98468f3eaebb58c9, type: 3}
+    cooldown: 10
+  remainingCooldown: 0
+  minSpawnRadius: 5
+  maxSpawnRadius: 10

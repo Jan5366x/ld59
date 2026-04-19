@@ -6,6 +6,7 @@ public class FlyDirectlyToTarget : MonoBehaviour
     [SerializeField] float speed = 5f;
     [SerializeField] GameObject target;
     public GameObject onPlayerHitPrefab;
+    public bool isFake;
 
     void Start()
     {
@@ -19,7 +20,11 @@ public class FlyDirectlyToTarget : MonoBehaviour
             var transformPosition = target.transform.position - transform.position;
             if (transformPosition.magnitude < 0.1f)
             {
-                Instantiate(onPlayerHitPrefab, target.transform.position, Quaternion.identity);
+                if (!isFake)
+                {
+                    Instantiate(onPlayerHitPrefab, target.transform.position, Quaternion.identity);
+                }
+
                 Destroy(gameObject);
                 return;
             }

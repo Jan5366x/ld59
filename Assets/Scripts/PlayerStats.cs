@@ -16,8 +16,6 @@ public class PlayerStats : MonoBehaviour
     public int radarSpeed;
     public UDictionary<PickupType, int> collectedPickups = new();
 
-    public GameObject gameOverPanel;
-
     public void CollectPickup(Pickup pickup)
     {
         health = Math.Min(maxHealth, health + pickup.health);
@@ -40,6 +38,6 @@ public class PlayerStats : MonoBehaviour
     private void ShowGameOverScreen()
     {
         Time.timeScale = 0;
-        gameOverPanel.SetActive(true);
+        GetComponentInChildren<GameOverButtons>().OpenGameOverPanel();
     }
 }

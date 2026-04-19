@@ -9,6 +9,7 @@ public class GunControl : MonoBehaviour
 
     InputAction moveAction;
     InputAction jumpAction;
+    InputAction pauseAction;
     PlayerStats playerStats;
 
     public float remainingFireDelay = 0;
@@ -18,6 +19,7 @@ public class GunControl : MonoBehaviour
     {
         moveAction = InputSystem.actions.FindAction("Move");
         jumpAction = InputSystem.actions.FindAction("Jump");
+        pauseAction = InputSystem.actions.FindAction("Pause");
         playerStats = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerStats>();
     }
 
@@ -32,6 +34,11 @@ public class GunControl : MonoBehaviour
         {
             remainingFireDelay = playerStats.fireDelay;
             Instantiate(bulletPrefab, transform.position, Quaternion.AngleAxis(angle, Vector3.forward));
+        }
+
+        if (pauseAction.WasPressedThisFrame())
+        {
+            transform.parent.GetComponentInChildren<GameOverButtons>().OpenGamePausedPanel();
         }
     }
 }
