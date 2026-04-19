@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5412331420074799005}
   - component: {fileID: 6151020943869687290}
   - component: {fileID: -4611839469395285312}
+  - component: {fileID: 6543056116959552063}
   m_Layer: 0
   m_Name: Explosion
   m_TagString: Untagged
@@ -83,7 +84,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 10
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -8387548502256867764, guid: de2d63ba072c471d68b72e145befbb1c, type: 3}
+  m_Sprite: {fileID: -976728128, guid: de2d63ba072c471d68b72e145befbb1c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -205,3 +206,25 @@ MonoBehaviour:
   initialTime: 1
   remainingTime: 0
   fade: 1
+--- !u!95 &6543056116959552063
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4472778535810024931}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: da5b7cf950366f3d990e4e70f67cc5f7, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
