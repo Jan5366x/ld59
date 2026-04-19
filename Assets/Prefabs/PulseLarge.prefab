@@ -105,7 +105,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17e962ccadb5c35e8832d04834f594b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SelfDestruct
-  initialTime: 1
+  initialTime: 2
   remainingTime: 0
 --- !u!82 &-1113580313250767619
 AudioSource:
@@ -118,7 +118,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: -2168765660280660571, guid: 909877e1cd611f41bb9ea2e1b7e60d67, type: 2}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 8300000, guid: 45a3d559d4707be99aa7804ea59446b9, type: 3}
+  m_Resource: {fileID: 8300000, guid: ad874e5cb0a93f4eb8c784a7410aed7b, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1

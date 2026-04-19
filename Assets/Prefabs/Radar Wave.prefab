@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 4673793699697277954}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.406, y: 0.317, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -106,7 +106,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 084cb6fad7769d497bdeac5682ef5e4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Radar
-  speed: 100
+  speed: 300
 --- !u!50 &2629772623477397839
 Rigidbody2D:
   serializedVersion: 5
