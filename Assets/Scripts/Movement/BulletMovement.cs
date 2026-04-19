@@ -61,7 +61,11 @@ public class BulletMovement : MonoBehaviour
             totalWeight += drop.weight;
             if (totalWeight > weight)
             {
-                Instantiate(drop.prefab, onScan.transform.position, Quaternion.identity);
+                if (drop.prefab != null)
+                {
+                    Instantiate(drop.prefab, onScan.transform.position, Quaternion.identity);
+                }
+
                 break;
             }
         }
