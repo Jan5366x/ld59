@@ -21,12 +21,8 @@ public class Radar : MonoBehaviour
         var onScanPrefab = other.GetComponent<OnScan>();
         if (onScanPrefab != null)
         {
+            onScanPrefab.wasScanned = true;
             Instantiate(onScanPrefab.scanIndicatorPrefab, other.transform.position, Quaternion.identity);
         }
-    }
-
-    private void OnTriggerExit2D(Collider2D other)
-    {
-        Debug.Log(other.name);
     }
 }

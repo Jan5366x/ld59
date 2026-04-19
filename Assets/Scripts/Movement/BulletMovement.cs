@@ -1,5 +1,5 @@
-using System;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class BulletMovement : MonoBehaviour
 {
@@ -21,13 +21,14 @@ public class BulletMovement : MonoBehaviour
         var onScan = other.GetComponent<OnScan>();
         if (onScan != null)
         {
-            foreach (var onScanHitIndicatorPrefab in onScan.hitIndicatorPrefabs)
+            if (onScan.wasScanned)
             {
-                Instantiate(onScanHitIndicatorPrefab, transform.position, Quaternion.identity);
-            }
+                Instantiate(onScan.hitIndicatorPrefabs, transform.position, Quaternion.identity);
+                InstantiateDrop(onScan);
 
-            Destroy(onScan.gameObject);
-            return;
+                Destroy(onScan.gameObject);
+                return;
+            }
         }
 
         var pickup = other.GetComponent<Pickup>();
@@ -41,6 +42,27 @@ public class BulletMovement : MonoBehaviour
                 playerStats.CollectPickup(pickup);
                 Destroy(pickup.gameObject);
                 return;
+            }
+        }
+    }
+
+    private void InstantiateDrop(OnScan onScan)
+    {
+        int totalWeight = 0;
+        foreach (var onScanHitIndicatorPrefab in onScan.hitIndicatorDrops)
+        {
+            totalWeight += onScanHitIndicatorPrefab.weight;
+        }
+
+        int weight = Random.Range(0, totalWeight);
+        totalWeight = 0;
+        foreach (var drop in onScan.hitIndicatorDrops)
+        {
+            totalWeight += drop.weight;
+            if (totalWeight > weight)
+            {
+                Instantiate(drop.prefab, transform.position, Quaternion.identity);
+                break;
             }
         }
     }

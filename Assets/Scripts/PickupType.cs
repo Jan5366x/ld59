@@ -1,4 +1,7 @@
 public enum PickupType
 {
-    EVERYTHING
+    GUN_ROTATION_SPEED,
+    GUN_FIRING_SPEED,
+    RADAR_SPEED,
+    HEALTH,
 }

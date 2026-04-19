@@ -22,33 +22,38 @@ public class DrawPickupIndicators : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        int i = 0;
-        foreach (var pickupType in Enum.GetValues(typeof(PickupType)).Cast<PickupType>())
+        int pickupTypeIndex = 0;
+        var pickupTypes = Enum.GetValues(typeof(PickupType)).Cast<PickupType>();
+        foreach (var pickupType in pickupTypes)
         {
-            if (!playerStats.collectedPickups.ContainsKey(pickupType))
-                continue;
             if (!pickupIndicators.ContainsKey(pickupType))
             {
                 pickupIndicators.Add(pickupType, new List<GameObject>());
             }
-            
-            while (playerStats.collectedPickups[pickupType] > pickupIndicators[pickupType].Count)
-            {
-                var typeOffset = new Vector3(
-                    i % 2 == 0 ? 0 : offset.x,
-                    // ReSharper disable once PossibleLossOfFraction
-                    offset.y * (i / 2),
-                    0
-                );
-                var stackedOffset = offsetStacked * pickupIndicators[pickupType].Count;
 
-                var instance = Instantiate(
-                    pickupIndicatorPrefabs[pickupType],
-                    transform.position + typeOffset + stackedOffset,
-                    Quaternion.identity
-                );
-                pickupIndicators[pickupType].Add(instance);
+            if (playerStats.collectedPickups.ContainsKey(pickupType))
+            {
+                while (playerStats.collectedPickups[pickupType] > pickupIndicators[pickupType].Count)
+                {
+                    var typeOffset = offset * pickupTypeIndex;/*  new Vector3(
+                        pickupTypeIndex % 2 == 0 ? 0 : offset.x,
+                        // ReSharper disable once PossibleLossOfFraction
+                        offset.y * (pickupTypeIndex / 2),
+                        0
+                    );*/
+                    var stackedOffset = offsetStacked * pickupIndicators[pickupType].Count;
+
+                    var instance = Instantiate(
+                        pickupIndicatorPrefabs[pickupType],
+                        transform.position + typeOffset + stackedOffset,
+                        Quaternion.identity,
+                        transform
+                    );
+                    pickupIndicators[pickupType].Add(instance);
+                }
             }
+
+            pickupTypeIndex++;
         }
     }
 }

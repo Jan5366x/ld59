@@ -16,12 +16,14 @@ public class PlayerStats : MonoBehaviour
     public int radarSpeed;
     public UDictionary<PickupType, int> collectedPickups = new();
 
+    public GameObject gameOverPanel;
+
     public void CollectPickup(Pickup pickup)
     {
         health = Math.Min(maxHealth, health + pickup.health);
         gunSpeed = Math.Min(maxGunSpeed, gunSpeed + pickup.gunSpeed);
         radarSpeed = Math.Min(maxRadarSpeed, radarSpeed + pickup.radarSpeed);
-        fireDelay = Math.Max(minFireDelay, fireDelay + pickup.fireDelay);
+        fireDelay = Math.Max(minFireDelay, fireDelay - pickup.fireDelay);
         collectedPickups[pickup.pickupType] = (collectedPickups.ContainsKey(pickup.pickupType) ? collectedPickups[pickup.pickupType] : 0) + 1;
     }
 
@@ -37,6 +39,7 @@ public class PlayerStats : MonoBehaviour
 
     private void ShowGameOverScreen()
     {
-        Debug.Log("Game Over");
+        Time.timeScale = 0;
+        gameOverPanel.SetActive(true);
     }
 }

@@ -82,7 +82,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_MaskInteraction: 0
   m_Sprite: {fileID: -2539215059313477321, guid: de2d63ba072c471d68b72e145befbb1c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -106,7 +106,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 084cb6fad7769d497bdeac5682ef5e4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Radar
-  speed: 300
 --- !u!50 &2629772623477397839
 Rigidbody2D:
   serializedVersion: 5

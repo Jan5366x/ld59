@@ -20,7 +20,12 @@ public class DrawLifeIndicators : MonoBehaviour
     {
         while (playerStats.health > lifeIndicators.Count)
         {
-            var instance = Instantiate(lifeIndicatorPrefab, transform.position + offset * lifeIndicators.Count, Quaternion.identity);
+            var instance = Instantiate(
+                lifeIndicatorPrefab, 
+                transform.position + offset * lifeIndicators.Count, 
+                Quaternion.identity,
+                transform
+            );
             lifeIndicators.Add(instance);
         }
         

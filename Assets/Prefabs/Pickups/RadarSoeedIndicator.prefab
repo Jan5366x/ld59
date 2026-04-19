@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7008674467000600593}
   - component: {fileID: 4790926553743835365}
   m_Layer: 0
-  m_Name: LifeIndicator
+  m_Name: RadarSoeedIndicator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

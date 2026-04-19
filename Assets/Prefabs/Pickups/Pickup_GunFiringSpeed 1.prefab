@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: -5583207745531882394}
   - component: {fileID: 8700276590988558618}
   m_Layer: 3
-  m_Name: Pickup
+  m_Name: Pickup_GunFiringSpeed 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -85,7 +85,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 3503229230539041919, guid: de2d63ba072c471d68b72e145befbb1c, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 1, b: 0.79957867, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -143,9 +143,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Pickup
   hitIndicatorPrefab: {fileID: 4472778535810024931, guid: fb987d847137522e093626b6cf6c1158, type: 3}
-  health: 1
-  gunSpeed: 10
-  radarSpeed: 10
+  health: 0
+  gunSpeed: 0
+  radarSpeed: 0
+  fireDelay: 0.2
+  pickupType: 1
   initialPickupDelay: 0.2
   pickupDelay: 0
 --- !u!114 &8700276590988558618
