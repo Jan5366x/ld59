@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: -5583207745531882394}
   - component: {fileID: 8700276590988558618}
   m_Layer: 3
-  m_Name: Pickup_GunFiringSpeed 1
+  m_Name: Pickup_GunFiringSpeed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -84,8 +84,8 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 3503229230539041919, guid: de2d63ba072c471d68b72e145befbb1c, type: 3}
-  m_Color: {r: 0, g: 1, b: 0.79957867, a: 1}
+  m_Sprite: {fileID: 108792275, guid: de2d63ba072c471d68b72e145befbb1c, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

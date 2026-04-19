@@ -349,33 +349,13 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 726541039481027650, guid: 396a264c2997a2c1dac5298eaf463200, type: 3}
-      propertyPath: offset.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 726541039481027650, guid: 396a264c2997a2c1dac5298eaf463200, type: 3}
       propertyPath: offsetStacked.x
-      value: 0.05
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 726541039481027650, guid: 396a264c2997a2c1dac5298eaf463200, type: 3}
       propertyPath: offsetStacked.y
-      value: -0.05
+      value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 726541039481027650, guid: 396a264c2997a2c1dac5298eaf463200, type: 3}
-      propertyPath: pickupIndicatorPrefabs.values.Array.size
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 726541039481027650, guid: 396a264c2997a2c1dac5298eaf463200, type: 3}
-      propertyPath: 'pickupIndicatorPrefabs.values.Array.data[1]'
-      value: 
-      objectReference: {fileID: 3933737785121438464, guid: 507aac3a0ac5a306588aa9a07588fba0, type: 3}
-    - target: {fileID: 726541039481027650, guid: 396a264c2997a2c1dac5298eaf463200, type: 3}
-      propertyPath: 'pickupIndicatorPrefabs.values.Array.data[2]'
-      value: 
-      objectReference: {fileID: 3933737785121438464, guid: 507aac3a0ac5a306588aa9a07588fba0, type: 3}
-    - target: {fileID: 726541039481027650, guid: 396a264c2997a2c1dac5298eaf463200, type: 3}
-      propertyPath: 'pickupIndicatorPrefabs.values.Array.data[3]'
-      value: 
-      objectReference: {fileID: 3933737785121438464, guid: 507aac3a0ac5a306588aa9a07588fba0, type: 3}
     - target: {fileID: 1316083565435927116, guid: 396a264c2997a2c1dac5298eaf463200, type: 3}
       propertyPath: m_IsActive
       value: 0

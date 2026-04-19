@@ -2209,7 +2209,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ee03f7a63687b39e84707e82656ef07, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DrawLifeIndicators
-  lifeIndicatorPrefab: {fileID: 3933737785121438464, guid: 507aac3a0ac5a306588aa9a07588fba0, type: 3}
+  lifeIndicatorPrefab: {fileID: 3933737785121438464, guid: 7014f1cd245d6f89e8b81695c0bf6c03, type: 3}
   offset: {x: 0, y: -1, z: 0}
   lifeIndicators: []
 --- !u!1 &8486787818652251173
@@ -2263,8 +2263,8 @@ MonoBehaviour:
     - {fileID: 3933737785121438464, guid: 507aac3a0ac5a306588aa9a07588fba0, type: 3}
     - {fileID: 3933737785121438464, guid: 4c10a68b2c3bb43f5a4d1b6e3084785a, type: 3}
     - {fileID: 3933737785121438464, guid: 7014f1cd245d6f89e8b81695c0bf6c03, type: 3}
-  offset: {x: 1, y: -1, z: 0}
-  offsetStacked: {x: 0.1, y: -0.1, z: 0}
+  offset: {x: 0, y: -1, z: 0}
+  offsetStacked: {x: 0.2, y: 0, z: 0}
   pickupIndicators:
     keys: 
 --- !u!1001 &1244172780159330305
