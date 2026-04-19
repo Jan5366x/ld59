@@ -36,7 +36,7 @@ public class GunControl : MonoBehaviour
             Instantiate(bulletPrefab, transform.position, Quaternion.AngleAxis(angle, Vector3.forward));
         }
 
-        if (pauseAction.WasPressedThisFrame())
+        if (pauseAction != null && pauseAction.WasPressedThisFrame())
         {
             transform.parent.GetComponentInChildren<GameOverButtons>().OpenGamePausedPanel();
         }

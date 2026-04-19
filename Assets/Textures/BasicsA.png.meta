@@ -707,6 +707,28 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: Turret
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 3
+        width: 22
+        height: 18
+      alignment: 9
+      pivot: {x: 0.38762352, y: 0.49051413}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b41860eb21a3c50e9adf74751cc6d90e
+      internalID: 568706449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
@@ -743,6 +765,7 @@ TextureImporter:
       RedIdicator: 201798927
       RotationSpeed: 180677421
       ScanSpeed: -2021064767
+      Turret: 568706449
       Wave1: 2690406483138826446
       Wave2: 6122539813604623068
       Wave3: 3503229230539041919
