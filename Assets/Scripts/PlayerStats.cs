@@ -24,6 +24,9 @@ public class PlayerStats : MonoBehaviour
     public List<PickupType> activePickups = new();
     public bool pickupsDirty;
 
+    public int pointCount;
+    public bool pointsDirty;
+
     private void Start()
     {
         activePickups.Add(PickupType.HEALTH);
