@@ -12,4 +12,7 @@ public class SpawnData
     
     [Min(0)]
     public float cooldown;
+    
+    [Min(0)]
+    public float minSecondsSinceStart;
 }

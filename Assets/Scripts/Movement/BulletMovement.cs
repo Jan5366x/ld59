@@ -23,7 +23,7 @@ public class BulletMovement : MonoBehaviour
         {
             if (onScan.wasScanned)
             {
-                Instantiate(onScan.hitIndicatorPrefabs, transform.position, Quaternion.identity);
+                Instantiate(onScan.hitIndicatorPrefabs, other.transform.position, Quaternion.identity);
                 InstantiateDrop(onScan);
 
                 Destroy(onScan.gameObject);
@@ -36,7 +36,7 @@ public class BulletMovement : MonoBehaviour
         {
             if (pickup.pickupDelay < 0)
             {
-                Instantiate(pickup.hitIndicatorPrefab, transform.position, Quaternion.identity);
+                Instantiate(pickup.hitIndicatorPrefab, other.transform.position, Quaternion.identity);
                 var player = GameObject.FindGameObjectWithTag("Player");
                 var playerStats = player.GetComponent<PlayerStats>();
                 playerStats.CollectPickup(pickup);
@@ -61,7 +61,7 @@ public class BulletMovement : MonoBehaviour
             totalWeight += drop.weight;
             if (totalWeight > weight)
             {
-                Instantiate(drop.prefab, transform.position, Quaternion.identity);
+                Instantiate(drop.prefab, onScan.transform.position, Quaternion.identity);
                 break;
             }
         }

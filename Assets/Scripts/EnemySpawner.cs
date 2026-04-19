@@ -12,14 +12,18 @@ public class EnemySpawner : MonoBehaviour
     public float minSpawnRadius = 5;
     public float maxSpawnRadius = 10;
 
+    public float secondsSinceStart;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        secondsSinceStart = 0;
     }
 
     // Update is called once per frame
     void Update()
     {
+        secondsSinceStart += Time.deltaTime;
         remainingCooldown -= Time.deltaTime;
         if (remainingCooldown < 0)
         {
@@ -38,14 +42,20 @@ public class EnemySpawner : MonoBehaviour
         int totalWeight = 0;
         for (var i = 0; i < enemyPrefabs.Length; i++)
         {
-            totalWeight += enemyPrefabs[i].weight;
+            if (secondsSinceStart > enemyPrefabs[i].minSecondsSinceStart)
+            {
+                totalWeight += enemyPrefabs[i].weight;
+            }
         }
 
         var targetWeight = Random.Range(0, totalWeight);
         totalWeight = 0;
         for (var i = 0; i < enemyPrefabs.Length; i++)
         {
-            totalWeight += enemyPrefabs[i].weight;
+            if (secondsSinceStart > enemyPrefabs[i].minSecondsSinceStart)
+            {
+                totalWeight += enemyPrefabs[i].weight;
+            }
             if (totalWeight > targetWeight)
             {
                 return enemyPrefabs[i];

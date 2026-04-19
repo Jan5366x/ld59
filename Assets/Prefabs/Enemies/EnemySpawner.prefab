@@ -45,32 +45,37 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemySpawner
   enemyPrefabs:
-  - weight: 1
+  - weight: 5
     prefabs:
     - {fileID: 7876252263352022908, guid: e14e1f38f6c734921bacc5c8e1fd3e4d, type: 3}
     cooldown: 1
-  - weight: 1
+    minSecondsSinceStart: 0
+  - weight: 2
     prefabs:
     - {fileID: 7876252263352022908, guid: e14e1f38f6c734921bacc5c8e1fd3e4d, type: 3}
     - {fileID: 7876252263352022908, guid: e14e1f38f6c734921bacc5c8e1fd3e4d, type: 3}
     - {fileID: 7876252263352022908, guid: e14e1f38f6c734921bacc5c8e1fd3e4d, type: 3}
     cooldown: 3
-  - weight: 1
+    minSecondsSinceStart: 0
+  - weight: 5
     prefabs:
     - {fileID: 7876252263352022908, guid: e14e1f38f6c734921bacc5c8e1fd3e4d, type: 3}
     - {fileID: 7876252263352022908, guid: 13cf14f963c342ad19232d5d7443d06f, type: 3}
     - {fileID: 7876252263352022908, guid: 13cf14f963c342ad19232d5d7443d06f, type: 3}
     cooldown: 10
-  - weight: 1
+    minSecondsSinceStart: 10
+  - weight: 10
     prefabs:
     - {fileID: 7876252263352022908, guid: eb406d708b7f652d0b2642fb03dcfa3a, type: 3}
     cooldown: 3
-  - weight: 1
+    minSecondsSinceStart: 5
+  - weight: 5
     prefabs:
     - {fileID: 7876252263352022908, guid: eb406d708b7f652d0b2642fb03dcfa3a, type: 3}
     - {fileID: 7876252263352022908, guid: 13cf14f963c342ad19232d5d7443d06f, type: 3}
     - {fileID: 7876252263352022908, guid: e14e1f38f6c734921bacc5c8e1fd3e4d, type: 3}
     cooldown: 5
+    minSecondsSinceStart: 20
   - weight: 1
     prefabs:
     - {fileID: 7876252263352022908, guid: eb406d708b7f652d0b2642fb03dcfa3a, type: 3}
@@ -79,6 +84,7 @@ MonoBehaviour:
     - {fileID: 7876252263352022908, guid: eb406d708b7f652d0b2642fb03dcfa3a, type: 3}
     - {fileID: 7876252263352022908, guid: 13cf14f963c342ad19232d5d7443d06f, type: 3}
     cooldown: 10
+    minSecondsSinceStart: 10
   - weight: 1
     prefabs:
     - {fileID: 7876252263352022908, guid: d3adc3b05690a32d98468f3eaebb58c9, type: 3}
@@ -103,6 +109,37 @@ MonoBehaviour:
     - {fileID: 7876252263352022908, guid: d3adc3b05690a32d98468f3eaebb58c9, type: 3}
     - {fileID: 7876252263352022908, guid: d3adc3b05690a32d98468f3eaebb58c9, type: 3}
     cooldown: 0.3
+    minSecondsSinceStart: 10
+  - weight: 5
+    prefabs:
+    - {fileID: 7876252263352022908, guid: eb406d708b7f652d0b2642fb03dcfa3a, type: 3}
+    - {fileID: 7876252263352022908, guid: eb406d708b7f652d0b2642fb03dcfa3a, type: 3}
+    - {fileID: 7876252263352022908, guid: eb406d708b7f652d0b2642fb03dcfa3a, type: 3}
+    - {fileID: 7876252263352022908, guid: eb406d708b7f652d0b2642fb03dcfa3a, type: 3}
+    - {fileID: 7876252263352022908, guid: eb406d708b7f652d0b2642fb03dcfa3a, type: 3}
+    - {fileID: 7876252263352022908, guid: eb406d708b7f652d0b2642fb03dcfa3a, type: 3}
+    - {fileID: 7876252263352022908, guid: 13cf14f963c342ad19232d5d7443d06f, type: 3}
+    - {fileID: 7876252263352022908, guid: 13cf14f963c342ad19232d5d7443d06f, type: 3}
+    cooldown: 5
+    minSecondsSinceStart: 30
+  - weight: 2
+    prefabs:
+    - {fileID: 7876252263352022908, guid: eb406d708b7f652d0b2642fb03dcfa3a, type: 3}
+    - {fileID: 7876252263352022908, guid: eb406d708b7f652d0b2642fb03dcfa3a, type: 3}
+    - {fileID: 7876252263352022908, guid: eb406d708b7f652d0b2642fb03dcfa3a, type: 3}
+    - {fileID: 7876252263352022908, guid: eb406d708b7f652d0b2642fb03dcfa3a, type: 3}
+    - {fileID: 7876252263352022908, guid: eb406d708b7f652d0b2642fb03dcfa3a, type: 3}
+    - {fileID: 7876252263352022908, guid: eb406d708b7f652d0b2642fb03dcfa3a, type: 3}
+    - {fileID: 7876252263352022908, guid: 13cf14f963c342ad19232d5d7443d06f, type: 3}
+    - {fileID: 7876252263352022908, guid: 13cf14f963c342ad19232d5d7443d06f, type: 3}
+    - {fileID: 7876252263352022908, guid: 13cf14f963c342ad19232d5d7443d06f, type: 3}
+    - {fileID: 7876252263352022908, guid: d3adc3b05690a32d98468f3eaebb58c9, type: 3}
+    - {fileID: 7876252263352022908, guid: d3adc3b05690a32d98468f3eaebb58c9, type: 3}
+    - {fileID: 7876252263352022908, guid: d3adc3b05690a32d98468f3eaebb58c9, type: 3}
+    - {fileID: 7876252263352022908, guid: d3adc3b05690a32d98468f3eaebb58c9, type: 3}
+    cooldown: 1
+    minSecondsSinceStart: 60
   remainingCooldown: 0
   minSpawnRadius: 5
   maxSpawnRadius: 10
+  secondsSinceStart: 0
