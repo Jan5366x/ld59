@@ -102,7 +102,7 @@ MonoBehaviour:
     - {fileID: 7876252263352022908, guid: d3adc3b05690a32d98468f3eaebb58c9, type: 3}
     - {fileID: 7876252263352022908, guid: d3adc3b05690a32d98468f3eaebb58c9, type: 3}
     - {fileID: 7876252263352022908, guid: d3adc3b05690a32d98468f3eaebb58c9, type: 3}
-    cooldown: 10
+    cooldown: 0.3
   remainingCooldown: 0
   minSpawnRadius: 5
   maxSpawnRadius: 10

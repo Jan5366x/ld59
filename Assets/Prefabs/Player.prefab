@@ -2153,18 +2153,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62d805b7b963a4462ae554e94717a94a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerStats
+  baseHealth: 4
+  baseGunRotationSpeed: 100
+  baseGunFiringDelay: 1
+  baseRadarRotationSpeed: 200
+  addGunRotationSpeed: 100
+  addGunFiringDelay: 0.3
+  addRadarRotationSpeed: 150
   maxHealth: 8
   maxGunSpeed: 200
-  maxRadarSpeed: 500
-  minFireDelay: 0.4
-  maxFireDelay: 3
+  maxRadarSpeed: 1000
+  minFireDelay: 0.2
   health: 4
-  gunSpeed: 50
-  fireDelay: 1.5
-  radarSpeed: 150
-  collectedPickups:
-    keys: 
-    values: 
+  activePickups: 
+  pickupsDirty: 0
 --- !u!1 &8186115178267499445
 GameObject:
   m_ObjectHideFlags: 0
@@ -2264,9 +2266,8 @@ MonoBehaviour:
     - {fileID: 3933737785121438464, guid: 4c10a68b2c3bb43f5a4d1b6e3084785a, type: 3}
     - {fileID: 3933737785121438464, guid: 7014f1cd245d6f89e8b81695c0bf6c03, type: 3}
   offset: {x: 0, y: -1, z: 0}
-  offsetStacked: {x: 0.2, y: 0, z: 0}
   pickupIndicators:
-    keys: 
+  - {fileID: 0}
 --- !u!1001 &1244172780159330305
 PrefabInstance:
   m_ObjectHideFlags: 0
