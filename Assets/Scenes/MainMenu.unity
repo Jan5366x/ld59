@@ -718,11 +718,11 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'YOUR MISSION:
 
-    You are a guntower in charge of protecting earth from
-    alien invaders.
+    You are a yound cadet at a guntower in charge of protecting
+    earth from alien invaders.
 
-    After an eternity without action you started to pickup some
-    strange signals on your radar.
+    After an months without action you start to pickup
+    some strange signals on your radar.
 
     Defend your home!
 
@@ -730,9 +730,9 @@ MonoBehaviour:
     CONTROLS:
 
     Movement:
-    A/D or Arrow
+    A/D or Arrows
 
-    Fire: Space'
+    Fire: Space or Enter or Ctrl'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1556,11 +1556,11 @@ RectTransform:
   - {fileID: 354595272}
   m_Father: {fileID: 1765276881}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 588.7025, y: -325.49683}
-  m_SizeDelta: {x: -1177.405, y: -650.9935}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 800, y: 480}
+  m_Pivot: {x: 1, y: 0}
 --- !u!114 &763497569
 MonoBehaviour:
   m_ObjectHideFlags: 0
