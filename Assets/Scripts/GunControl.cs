@@ -27,12 +27,12 @@ public class GunControl : MonoBehaviour
     void Update()
     {
         remainingFireDelay -= Time.deltaTime;
-        angle -= moveAction.ReadValue<Vector2>().x * playerStats.gunSpeed * Time.deltaTime;
+        angle -= moveAction.ReadValue<Vector2>().x * playerStats.GetGunRotationSpeed() * Time.deltaTime;
         transform.rotation = Quaternion.Euler(0, 0, angle);
 
         if (jumpAction.IsPressed() && remainingFireDelay < 0)
         {
-            remainingFireDelay = playerStats.fireDelay;
+            remainingFireDelay = playerStats.GetGunFiringDelay();
             Instantiate(bulletPrefab, transform.position, Quaternion.AngleAxis(angle, Vector3.forward));
         }
 

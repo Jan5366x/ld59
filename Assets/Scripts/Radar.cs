@@ -13,7 +13,7 @@ public class Radar : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Rotate(new Vector3(0, 0, 1) * playerStats.radarSpeed * Time.deltaTime);
+        transform.Rotate(new Vector3(0, 0, 1) * (playerStats.GetRadarRotationSpeed() * Time.deltaTime));
     }
 
     private void OnTriggerEnter2D(Collider2D other)

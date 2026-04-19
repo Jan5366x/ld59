@@ -1,34 +1,81 @@
 using System;
+using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class PlayerStats : MonoBehaviour
 {
+    public int baseHealth = 4;
+    public int baseGunRotationSpeed = 100;
+    public float baseGunFiringDelay = 1f;
+    public int baseRadarRotationSpeed = 200;
+
+    public int addGunRotationSpeed = 70;
+    public float addGunFiringDelay = 0.3f;
+    public int addRadarRotationSpeed = 100;
+
     public int maxHealth = 8;
     public int maxGunSpeed = 200;
-    public int maxRadarSpeed = 1000;
-    public float minFireDelay = 0.3f;
-    public float maxFireDelay = 2f;
+    public int maxRadarSpeed = 500;
+    public float minFireDelay = 0.2f;
 
     public int health = 4;
-    public int gunSpeed;
-    public float fireDelay = 1f;
 
-    public int radarSpeed;
-    public UDictionary<PickupType, int> collectedPickups = new();
+    public List<PickupType> activePickups = new();
+    public bool pickupsDirty;
+
+    private void Start()
+    {
+        activePickups.Add(PickupType.HEALTH);
+        activePickups.Add(PickupType.HEALTH);
+        activePickups.Add(PickupType.HEALTH);
+        activePickups.Add(PickupType.HEALTH);
+        pickupsDirty = true;
+        health = baseHealth;
+    }
 
     public void CollectPickup(Pickup pickup)
     {
-        health = Math.Min(maxHealth, health + pickup.health);
-        gunSpeed = Math.Min(maxGunSpeed, gunSpeed + pickup.gunSpeed);
-        radarSpeed = Math.Min(maxRadarSpeed, radarSpeed + pickup.radarSpeed);
-        fireDelay = Math.Max(minFireDelay, fireDelay - pickup.fireDelay);
-        collectedPickups[pickup.pickupType] = (collectedPickups.ContainsKey(pickup.pickupType) ? collectedPickups[pickup.pickupType] : 0) + 1;
+        activePickups.Add(pickup.pickupType);
+        while (activePickups.Count > 4)
+        {
+            activePickups.RemoveAt(0);
+        }
+
+        pickupsDirty = true;
+
+        if (pickup.pickupType == PickupType.HEALTH)
+        {
+            health = Math.Min(maxHealth, health + pickup.health);
+        }
+    }
+
+    public int getHealth()
+    {
+        return health;
+    }
+
+    public int GetGunRotationSpeed()
+    {
+        var count = activePickups.Count(type => type == PickupType.GUN_ROTATION_SPEED);
+        return Math.Min(maxGunSpeed, baseGunRotationSpeed + count * addGunRotationSpeed);
+    }
+
+    public float GetGunFiringDelay()
+    {
+        var count = activePickups.Count(type => type == PickupType.GUN_FIRING_SPEED);
+        return Math.Max(minFireDelay, baseGunFiringDelay - count * addGunFiringDelay);
+    }
+
+    public int GetRadarRotationSpeed()
+    {
+        var count = activePickups.Count(type => type == PickupType.RADAR_SPEED);
+        return Math.Min(maxRadarSpeed, baseRadarRotationSpeed + count * addRadarRotationSpeed);
     }
 
     public void OnDamage()
     {
         health = Math.Max(0, health - 1);
-        fireDelay = Math.Min(maxFireDelay, fireDelay + 0.1f);
         if (health <= 0)
         {
             ShowGameOverScreen();
