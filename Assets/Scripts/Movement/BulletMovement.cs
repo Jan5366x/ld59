@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class BulletMovement : MonoBehaviour
@@ -37,10 +38,7 @@ public class BulletMovement : MonoBehaviour
                 Instantiate(pickup.hitIndicatorPrefab, transform.position, Quaternion.identity);
                 var player = GameObject.FindGameObjectWithTag("Player");
                 var playerStats = player.GetComponent<PlayerStats>();
-                playerStats.health += pickup.health;
-                playerStats.gunSpeed += pickup.gunSpeed;
-                playerStats.radarSpeed += pickup.radarSpeed;
-
+                playerStats.CollectPickup(pickup);
                 Destroy(pickup.gameObject);
                 return;
             }

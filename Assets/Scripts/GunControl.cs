@@ -22,7 +22,7 @@ public class GunControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        angle += moveAction.ReadValue<Vector2>().x * playerStats.gunSpeed * Time.deltaTime;
+        angle -= moveAction.ReadValue<Vector2>().x * playerStats.gunSpeed * Time.deltaTime;
         transform.rotation = Quaternion.Euler(0, 0, angle);
 
         if (jumpAction.WasPressedThisFrame())

@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5412331420074799005}
   - component: {fileID: 6151020943869687290}
   - component: {fileID: -4611839469395285312}
+  - component: {fileID: -3406964305644270414}
   m_Layer: 0
   m_Name: ExplosionPlayerHit
   m_TagString: Untagged
@@ -205,3 +206,15 @@ MonoBehaviour:
   initialTime: 1
   remainingTime: 0
   fade: 1
+--- !u!114 &-3406964305644270414
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4472778535810024931}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 738c9c2109fc4d6fafc6357586d8a371, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DamagePlayer

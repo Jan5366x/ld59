@@ -230,6 +230,7 @@ Transform:
   - {fileID: 4340775906883639219}
   - {fileID: 4664052277914712904}
   - {fileID: 4351478188236547495}
+  - {fileID: 5236846011228698372}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &8095393895841873307
@@ -244,9 +245,59 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62d805b7b963a4462ae554e94717a94a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerStats
-  health: 0
+  maxHealth: 8
+  maxGunSpeed: 200
+  maxRadarSpeed: 1000
+  health: 4
   gunSpeed: 50
   radarSpeed: 200
+--- !u!1 &8186115178267499445
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5236846011228698372}
+  - component: {fileID: 2623974431576756508}
+  m_Layer: 0
+  m_Name: LifeIndicators
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5236846011228698372
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8186115178267499445}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -8, y: 4, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5617747022538940710}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2623974431576756508
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8186115178267499445}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ee03f7a63687b39e84707e82656ef07, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DrawLifeIndicators
+  lifeIndicatorPrefab: {fileID: 3933737785121438464, guid: 507aac3a0ac5a306588aa9a07588fba0, type: 3}
+  offset: {x: 0, y: -1, z: 0}
+  lifeIndicators: []
 --- !u!1001 &1244172780159330305
 PrefabInstance:
   m_ObjectHideFlags: 0

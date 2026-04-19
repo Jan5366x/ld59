@@ -146,7 +146,7 @@ MonoBehaviour:
   health: 1
   gunSpeed: 10
   radarSpeed: 10
-  initialPickupDelay: 0.5
+  initialPickupDelay: 0.2
   pickupDelay: 0
 --- !u!114 &8700276590988558618
 MonoBehaviour:
