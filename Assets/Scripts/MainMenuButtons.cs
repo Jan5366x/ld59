@@ -5,7 +5,9 @@ public class MainMenuButtons : MonoBehaviour
 {
     public GameObject infos;
     public GameObject credits;
-    
+    public GameObject showCreditsButton;
+    public GameObject showInfosButton;
+
     public void StartGame()
     {
         SceneManager.LoadScene("SampleScene");
@@ -14,15 +16,19 @@ public class MainMenuButtons : MonoBehaviour
 
     public void ShowCredits()
     {
-        if(credits.activeInHierarchy)
+        if (credits.activeInHierarchy)
         {
             credits.SetActive(false);
             infos.SetActive(true);
+            showInfosButton.SetActive(false);
+            showCreditsButton.SetActive(true);
         }
         else
         {
             credits.SetActive(true);
             infos.SetActive(false);
+            showInfosButton.SetActive(true);
+            showCreditsButton.SetActive(false);
         }
     }
 
