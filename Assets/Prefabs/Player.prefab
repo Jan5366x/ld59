@@ -196,7 +196,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GunControl
   angle: 0
-  moveSpeed: 100
   bulletPrefab: {fileID: 2325298295829749608, guid: aef3b5aed86cbea2fab57832567948ba, type: 3}
 --- !u!1 &7990484236516839588
 GameObject:
@@ -207,6 +206,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5617747022538940710}
+  - component: {fileID: 8095393895841873307}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -232,6 +232,21 @@ Transform:
   - {fileID: 4351478188236547495}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8095393895841873307
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7990484236516839588}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62d805b7b963a4462ae554e94717a94a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerStats
+  health: 0
+  gunSpeed: 50
+  radarSpeed: 200
 --- !u!1001 &1244172780159330305
 PrefabInstance:
   m_ObjectHideFlags: 0

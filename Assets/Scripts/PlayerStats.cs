@@ -1,9 +1,10 @@
 using UnityEngine;
 
-public class OnScan : MonoBehaviour
+public class PlayerStats : MonoBehaviour
 {
-    public GameObject scanIndicatorPrefab;
-    public GameObject[] hitIndicatorPrefabs;
+    public int health;
+    public int gunSpeed;
+    public int radarSpeed;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
