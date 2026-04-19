@@ -729,6 +729,28 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: Damage
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 46
+        width: 26
+        height: 26
+      alignment: 9
+      pivot: {x: 0.49288383, y: 0.47153547}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56c3048ee697563c8a5ccaa71002c89a
+      internalID: 1856129070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
@@ -750,6 +772,7 @@ TextureImporter:
       Color2: 7900774645288469719
       Color3: -4872027018406484839
       Color4: -4686177684673595580
+      Damage: 1856129070
       Error: 8306559346486447068
       FireSpeed: 108792275
       Health: 1014926779
