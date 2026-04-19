@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class GunControl : MonoBehaviour
 {
@@ -7,21 +8,25 @@ public class GunControl : MonoBehaviour
 
     public GameObject bulletPrefab;
     
+    InputAction moveAction;
+    InputAction jumpAction;
+    
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        moveAction = InputSystem.actions.FindAction("Move");
+        jumpAction = InputSystem.actions.FindAction("Jump");
     }
 
     // Update is called once per frame
     void Update()
     {
-        angle += Input.GetAxis("Horizontal") * moveSpeed * Time.deltaTime;
+        angle += moveAction.ReadValue<Vector2>().x * moveSpeed * Time.deltaTime;
         transform.rotation = Quaternion.Euler(0, 0, angle);
 
-        if (Input.GetButtonDown("Fire1"))
+        if (jumpAction.WasPressedThisFrame())
         {
-            Instantiate(bulletPrefab, transform.position, transform.rotation);
+            Instantiate(bulletPrefab, transform.position, Quaternion.AngleAxis(angle, Vector3.forward));
         }
         
         

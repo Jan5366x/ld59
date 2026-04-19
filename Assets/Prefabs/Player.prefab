@@ -118,8 +118,8 @@ Transform:
   m_GameObject: {fileID: 7171778212988361696}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3, y: 0, z: 0}
-  m_LocalScale: {x: 7, y: 0.1, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 5617747022538940710}
@@ -173,7 +173,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 5
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_Sprite: {fileID: 8031478037897926738, guid: de2d63ba072c471d68b72e145befbb1c, type: 3}
   m_Color: {r: 1, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -197,7 +197,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::GunControl
   angle: 0
   moveSpeed: 100
-  bulletPrefab: {fileID: 0}
+  bulletPrefab: {fileID: 2325298295829749608, guid: aef3b5aed86cbea2fab57832567948ba, type: 3}
 --- !u!1 &7990484236516839588
 GameObject:
   m_ObjectHideFlags: 0
