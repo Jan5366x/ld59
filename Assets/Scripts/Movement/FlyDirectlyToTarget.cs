@@ -5,6 +5,7 @@ public class FlyDirectlyToTarget : MonoBehaviour
 {
     [SerializeField] float speed = 5f;
     [SerializeField] GameObject target;
+    public GameObject onPlayerHitPrefab;
 
     void Start()
     {
@@ -15,7 +16,15 @@ public class FlyDirectlyToTarget : MonoBehaviour
     {
         if (target)
         {
-            Vector3 direction = (target.transform.position - transform.position).normalized;
+            var transformPosition = target.transform.position - transform.position;
+            if (transformPosition.magnitude < 0.1f)
+            {
+                Instantiate(onPlayerHitPrefab, target.transform.position, Quaternion.identity);
+                Destroy(gameObject);
+                return;
+            }
+
+            Vector3 direction = transformPosition.normalized;
             transform.position += direction * speed * Time.deltaTime;
         }
     }

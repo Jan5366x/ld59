@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6151020943869687290}
   - component: {fileID: -4611839469395285312}
   m_Layer: 0
-  m_Name: Explosion
+  m_Name: ExplosionPlayerHit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -29,7 +29,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 3, y: 3, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -83,7 +83,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 10
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -8387548502256867764, guid: de2d63ba072c471d68b72e145befbb1c, type: 3}
+  m_Sprite: {fileID: 1061601104, guid: de2d63ba072c471d68b72e145befbb1c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -104,7 +104,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: -7874904338507164441, guid: 909877e1cd611f41bb9ea2e1b7e60d67, type: 2}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 8300000, guid: a4fb641bbcca030b08f76136f77e6a14, type: 3}
+  m_Resource: {fileID: 8300000, guid: 9c41212b784b98ae3a978acad698f0a3, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1

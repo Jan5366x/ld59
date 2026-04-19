@@ -5,6 +5,7 @@ public class SelfDestruct : MonoBehaviour
     public float initialTime = 1;
 
     public float remainingTime;
+    public bool fade;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -16,10 +17,14 @@ public class SelfDestruct : MonoBehaviour
     void Update()
     {
         remainingTime -= Time.deltaTime;
-        SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
-        var color = spriteRenderer.color;
-        color.a = Mathf.Clamp01(remainingTime/initialTime);
-        spriteRenderer.color = color;
+        if (fade)
+        {
+            SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
+            var color = spriteRenderer.color;
+            color.a = Mathf.Clamp01(remainingTime / initialTime);
+            spriteRenderer.color = color;
+        }
+
         if (remainingTime <= 0)
         {
             Destroy(gameObject);

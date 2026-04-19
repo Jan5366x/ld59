@@ -21,7 +21,7 @@ public class BulletMovement : MonoBehaviour
         var onScan = other.GetComponent<OnScan>();
         if (onScan != null)
         {
-            Instantiate(onScan.hitIndicatorPrefab);
+            Instantiate(onScan.hitIndicatorPrefab, transform.position, Quaternion.identity);
             Destroy(onScan.gameObject);
         }
     }

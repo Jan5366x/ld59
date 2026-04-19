@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 667485502290717147}
   - component: {fileID: 4439599005548810846}
-  - component: {fileID: 1454415695995777073}
   - component: {fileID: 8840400225555311811}
   - component: {fileID: -4536871650969799653}
+  - component: {fileID: 1651891269689792971}
   m_Layer: 3
   m_Name: RadrTarget
   m_TagString: Untagged
@@ -94,8 +94,37 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
---- !u!61 &1454415695995777073
-BoxCollider2D:
+--- !u!114 &8840400225555311811
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7876252263352022908}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ecd320313cd34ea198f94c85b8833775, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::OnScan
+  scanIndicatorPrefab: {fileID: 2213476774028833971, guid: 79c6a493b8e63fc92a9913e0ac1753a2, type: 3}
+  hitIndicatorPrefab: {fileID: 4472778535810024931, guid: 18a4fcc6f796baa3f87ce9787553d116, type: 3}
+--- !u!114 &-4536871650969799653
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7876252263352022908}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 593a2d49053a4edabf1493ad65bd1c86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FlyDirectlyToTarget
+  speed: 0.4
+  target: {fileID: 0}
+  onPlayerHitPrefab: {fileID: 4472778535810024931, guid: 2bb932962ca659618855765e43ed47ef, type: 3}
+--- !u!58 &1651891269689792971
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -129,42 +158,4 @@ BoxCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.5625, y: 0.5625}
-    newSize: {x: 0.5625, y: 0.5625}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Size: {x: 0.5625, y: 0.5625}
-  m_EdgeRadius: 0
---- !u!114 &8840400225555311811
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7876252263352022908}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ecd320313cd34ea198f94c85b8833775, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::OnScan
-  scanIndicatorPrefab: {fileID: 2213476774028833971, guid: 79c6a493b8e63fc92a9913e0ac1753a2, type: 3}
-  hitIndicatorPrefab: {fileID: 4472778535810024931, guid: 18a4fcc6f796baa3f87ce9787553d116, type: 3}
---- !u!114 &-4536871650969799653
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7876252263352022908}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 593a2d49053a4edabf1493ad65bd1c86, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::FlyDirectlyToTarget
-  speed: 0.4
-  target: {fileID: 0}
+  m_Radius: 0.28125
