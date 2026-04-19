@@ -190,7 +190,7 @@ public class UDictionary
             var kHeight = GetChildernSingleHeight(key);
             var vHeight = GetChildernSingleHeight(value);
 
-            var max = Math.Max(kHeight, vHeight);
+            var max = Mathf.Max(kHeight, vHeight);
 
             if (max < SingleLineHeight) max = SingleLineHeight;
 

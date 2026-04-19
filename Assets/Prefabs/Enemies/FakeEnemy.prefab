@@ -109,6 +109,7 @@ MonoBehaviour:
   scanIndicatorPrefab: {fileID: 2213476774028833971, guid: 4b12e0185ba92728d93d5526bb054b84, type: 3}
   hitIndicatorPrefabs: {fileID: 4472778535810024931, guid: 18a4fcc6f796baa3f87ce9787553d116, type: 3}
   hitIndicatorDrops: []
+  scorePoints: 0
   wasScanned: 0
 --- !u!114 &-4536871650969799653
 MonoBehaviour:

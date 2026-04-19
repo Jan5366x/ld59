@@ -22,26 +22,28 @@ public class DrawScoreIndicator : MonoBehaviour
     {
         if (playerStats.pointsDirty)
         {
-            int numDigits = Mathf.CeilToInt(Mathf.Log10(playerStats.pointCount));
-            while (numDigits > digits.Count)
-            {
-                var digit = Instantiate(
-                    digitPrefab,
-                    digitOffset * digits.Count,
-                    Quaternion.identity,
-                    transform
-                );
-                digits.Add(digit);
-            }
-
             int remaining = playerStats.pointCount;
-            for (int d = 0; d < numDigits; d++)
+            int numDigits = 0;
+
+            do
             {
-                var digit = digits[d];
+                numDigits++;
+                while (numDigits > digits.Count)
+                {
+                    var d = Instantiate(
+                        digitPrefab,
+                        transform.position + digitOffset * digits.Count,
+                        Quaternion.identity,
+                        transform
+                    );
+                    digits.Add(d);
+                }
+
+                var digit = digits[numDigits-1];
                 var spriteRenderer = digit.GetComponent<SpriteRenderer>();
                 spriteRenderer.sprite = digitSprites[remaining % 10];
                 remaining /= 10;
-            }
+            } while (remaining > 0);
 
             playerStats.pointsDirty = false;
         }

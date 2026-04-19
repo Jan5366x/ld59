@@ -4,10 +4,13 @@ using Random = UnityEngine.Random;
 public class BulletMovement : MonoBehaviour
 {
     public float speed;
+    
+    PlayerStats playerStats;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        playerStats = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerStats>();
     }
 
     // Update is called once per frame
@@ -26,6 +29,7 @@ public class BulletMovement : MonoBehaviour
                 Instantiate(onScan.hitIndicatorPrefabs, other.transform.position, Quaternion.identity);
                 InstantiateDrop(onScan);
 
+                playerStats.Score(onScan.scorePoints);
                 Destroy(onScan.gameObject);
                 return;
             }

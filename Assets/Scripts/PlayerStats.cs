@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -34,6 +33,8 @@ public class PlayerStats : MonoBehaviour
         activePickups.Add(PickupType.HEALTH);
         activePickups.Add(PickupType.HEALTH);
         pickupsDirty = true;
+        pointCount = 0;
+        pointsDirty = true;
         health = baseHealth;
     }
 
@@ -49,7 +50,7 @@ public class PlayerStats : MonoBehaviour
 
         if (pickup.pickupType == PickupType.HEALTH)
         {
-            health = Math.Min(maxHealth, health + pickup.health);
+            health = Mathf.Min(maxHealth, health + pickup.health);
         }
     }
 
@@ -61,24 +62,24 @@ public class PlayerStats : MonoBehaviour
     public int GetGunRotationSpeed()
     {
         var count = activePickups.Count(type => type == PickupType.GUN_ROTATION_SPEED);
-        return Math.Min(maxGunSpeed, baseGunRotationSpeed + count * addGunRotationSpeed);
+        return Mathf.Min(maxGunSpeed, baseGunRotationSpeed + count * addGunRotationSpeed);
     }
 
     public float GetGunFiringDelay()
     {
         var count = activePickups.Count(type => type == PickupType.GUN_FIRING_SPEED);
-        return Math.Max(minFireDelay, baseGunFiringDelay - count * addGunFiringDelay);
+        return Mathf.Max(minFireDelay, baseGunFiringDelay - count * addGunFiringDelay);
     }
 
     public int GetRadarRotationSpeed()
     {
         var count = activePickups.Count(type => type == PickupType.RADAR_SPEED);
-        return Math.Min(maxRadarSpeed, baseRadarRotationSpeed + count * addRadarRotationSpeed);
+        return Mathf.Min(maxRadarSpeed, baseRadarRotationSpeed + count * addRadarRotationSpeed);
     }
 
     public void OnDamage()
     {
-        health = Math.Max(0, health - 1);
+        health = Mathf.Max(0, health - 1);
         if (health <= 0)
         {
             ShowGameOverScreen();
@@ -89,5 +90,11 @@ public class PlayerStats : MonoBehaviour
     {
         Time.timeScale = 0;
         GetComponentInChildren<GameOverButtons>().OpenGameOverPanel();
+    }
+
+    public void Score(int onScanScorePoints)
+    {
+        pointCount += onScanScorePoints;
+        pointsDirty = true;
     }
 }
