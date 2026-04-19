@@ -6,6 +6,9 @@ public class Pickup : MonoBehaviour
     public int health;
     public int gunSpeed;
     public int radarSpeed;
+    public float fireDelay;
+    public PickupType pickupType;
+    
     public float initialPickupDelay;
     public float pickupDelay;
 

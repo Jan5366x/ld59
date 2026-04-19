@@ -1,11 +1,10 @@
-using System;
 using UnityEngine;
 
-    public class DamagePlayer : MonoBehaviour
+public class DamagePlayer : MonoBehaviour
+{
+    private void Start()
     {
-        private void Start()
-        {
-            var playerStats = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerStats>();
-            playerStats.OnDamage();
-        }
+        var playerStats = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerStats>();
+        playerStats.OnDamage();
     }
+}

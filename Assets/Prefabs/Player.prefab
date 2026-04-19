@@ -231,6 +231,7 @@ Transform:
   - {fileID: 4664052277914712904}
   - {fileID: 4351478188236547495}
   - {fileID: 5236846011228698372}
+  - {fileID: 3145766181296323124}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &8095393895841873307
@@ -248,9 +249,15 @@ MonoBehaviour:
   maxHealth: 8
   maxGunSpeed: 200
   maxRadarSpeed: 1000
+  minFireDelay: 0.3
+  maxFireDelay: 2
   health: 4
   gunSpeed: 50
+  fireDelay: 1
   radarSpeed: 200
+  collectedPickups:
+    keys: 
+    values: 
 --- !u!1 &8186115178267499445
 GameObject:
   m_ObjectHideFlags: 0
@@ -298,6 +305,58 @@ MonoBehaviour:
   lifeIndicatorPrefab: {fileID: 3933737785121438464, guid: 507aac3a0ac5a306588aa9a07588fba0, type: 3}
   offset: {x: 0, y: -1, z: 0}
   lifeIndicators: []
+--- !u!1 &8486787818652251173
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3145766181296323124}
+  - component: {fileID: 726541039481027650}
+  m_Layer: 0
+  m_Name: PickupIndicators
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3145766181296323124
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8486787818652251173}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 7, y: 4, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5617747022538940710}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &726541039481027650
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8486787818652251173}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b31da2d069d105e9b94df39b363db05f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DrawPickupIndicators
+  pickupIndicatorPrefabs:
+    keys: 00000000
+    values:
+    - {fileID: 3933737785121438464, guid: 507aac3a0ac5a306588aa9a07588fba0, type: 3}
+  offset: {x: 1, y: -1, z: 0}
+  offsetStacked: {x: 0.1, y: -0.1, z: 0}
+  pickupIndicators:
+    keys: 
 --- !u!1001 &1244172780159330305
 PrefabInstance:
   m_ObjectHideFlags: 0
