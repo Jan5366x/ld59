@@ -12,11 +12,13 @@ Defend your home!
 ## Keyboard:
 
 Movement: A/D or Arrow Keys
+
 Fire: Space or Cntrl or Enter
 ## Controller:
 
 Movement: JoyStick 
-Jump: Y
+
+Fire: Y
 # Tools
 ## Software
 
