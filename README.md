@@ -15,15 +15,15 @@ Movement: A/D or Arrow Keys
 Fire: Space or Cntrl or Enter
 ## Controller:
 
-Movement: JoyStick Jump: Y
+Movement: JoyStick 
+Jump: Y
 # Tools
 ## Software
 
     Unity 3D
-    Aseprite
-    Magix Music Maker Pro
     JetBrains Rider
-    Audacity
+    Aseprite
+    bfxr
 
 (All assets are produced while 72h game jam!)
 # Credits
