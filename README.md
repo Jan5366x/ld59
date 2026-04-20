@@ -4,7 +4,7 @@ Alien Signal - Ludum Dare 59
 
 You are a young cadet at a guntower in charge of protecting earth from alien invaders.
 
-After an months without action you start to pickup some strange signals on your radar.
+After months without action you start to pickup some strange signals on your radar.
 
 Defend your home!
 
